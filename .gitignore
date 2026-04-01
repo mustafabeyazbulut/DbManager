@@ -1,0 +1,161 @@
+# =====================
+# Build / Output
+# =====================
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+dist/
+out/
+publish/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.log
+*.lib
+*.exp
+*.app
+
+# =====================
+# .NET / Visual Studio
+# =====================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+TestResults/
+BundleArtifacts/
+PublishProfiles/
+_ReSharper*/
+*.[Rr]e[Ss]harper
+StyleCop*.Cache
+.roslyn/
+
+# =====================
+# .NET MAUI / Xamarin
+# =====================
+*.apk
+*.aab
+*.ipa
+*.dsym/
+*.dSYM.zip
+**/Platforms/Android/Assets/*.apk
+**/Resource.designer.cs
+google-services.json
+GoogleService-Info.plist
+
+# =====================
+# NuGet
+# =====================
+*.nupkg
+.nuget/
+nuget.exe
+
+# =====================
+# Node.js / Web
+# =====================
+node_modules/
+bower_components/
+.npm/
+.yarn/
+*.tsbuildinfo
+
+# =====================
+# IDE / Editor
+# =====================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# =====================
+# OS Files
+# =====================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# =====================
+# Secrets / Config
+# =====================
+*.env
+
+
+# =====================
+# Logs / Temp
+# =====================
+*.log
+logs/
+Log/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# =====================
+# Database
+# =====================
+*.mdf
+*.ldf
+*.ndf
+*.sqlite
+*.db
+
+# =====================
+# Publish / Deploy
+# =====================
+*.publishsettings
+*.azurePubxml
+*.pubxml
+*.pubxml.user
+
+# =====================
+# Installer / Setup
+# =====================
+*.msi
+*.msm
+*.cab
+*.msix
+*.msixbundle
+*.appxbundle
+*.appx
+
+# =====================
+# Archive
+# =====================
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# =====================
+# Windows CE / WinCE
+# =====================
+*.cab
+*.armv4i
+*.deploy
+
+# =====================
+# Claude Code
+# =====================
+.claude/
