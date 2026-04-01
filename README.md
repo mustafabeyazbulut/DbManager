@@ -1,58 +1,58 @@
 # DbManager
 
-SQL Server veritabanlarını yönetmek için geliştirilmiş Windows Forms masaüstü uygulaması.
+A Windows Forms app to manage SQL Server databases.
 
-## Özellikler
+## Features
 
-- **Sunucu Bilgisi** — Sürüm, edition, toplam/online/offline DB sayısı, toplam disk kullanımı
-- **Veritabanı Listesi** — Durum, kurtarma modeli, boyut, son backup tarihi, salt-okunur bilgisi
-- **Tablo / Prosedür / Dosya Detayları** — Seçili veritabanının içeriğine detaylı bakış
-- **Backup** — Seçili veritabanının tam yedeğini alır
-- **Shrink** — Veritabanı veya log dosyasını küçültür
-- **Index Yönetimi** — Fragmentasyon analizi; rebuild / reorganize işlemleri
-- **Aktif Bağlantılar** — Oturum, CPU, bellek, bekleme türü, bloklamalar
-- **Uzun Süren Sorgular** — Çalışan sorgular ve SQL metinleri
-- **Kilit Bilgisi** — Kilitli kaynaklar ve bekleme süreleri
-- **TempDB Kullanımı** — Oturum bazında tempdb kullanım bilgisi
-- **Kullanıcılar** — Veritabanı kullanıcıları ve rol üyelikleri
-- **SQL Agent Jobs** — İş listesi, son çalışma zamanı ve durum
-- **Excel Export** — Tüm grid görünümleri xlsx olarak dışa aktarılabilir
-- **Loglama** — İşlemler `Log/DatabaseLog/` klasörüne otomatik olarak yazılır
+- **Server Info** — Version, edition, total/online/offline DB count, disk usage
+- **Database List** — Status, recovery model, size, last backup date, read-only info
+- **Table / Procedure / File Details** — Detailed view of a selected database
+- **Backup** — Takes a full backup of a selected database
+- **Shrink** — Makes a database or log file smaller
+- **Index Management** — Fragmentation check; rebuild / reorganize operations
+- **Active Connections** — Session, CPU, memory, wait type, blocking info
+- **Long Running Queries** — Running queries and SQL text
+- **Lock Info** — Locked resources and wait times
+- **TempDB Usage** — TempDB usage per session
+- **Users** — Database users and role memberships
+- **SQL Agent Jobs** — Job list, last run time and status
+- **Excel Export** — All grid views can be exported as xlsx
+- **Logging** — Actions are saved to `Log/DatabaseLog/` folder
 
-## Gereksinimler
+## Requirements
 
-| Bileşen | Sürüm |
+| Component | Version |
 |---|---|
 | .NET Framework | 4.8 |
 | DevExpress WinForms | 21.2 |
 | Microsoft SQL Server | 2012+ |
 
-> DevExpress lisansı ayrıca edinilmelidir. Kütüphaneler `bin/Debug/` içinde yer alır ancak `.gitignore` tarafından izlenmez.
+> A DevExpress license is needed. Libraries go in `bin/Debug/` but are not tracked by `.gitignore`.
 
-## Kurulum
+## Setup
 
-1. Repoyu klonlayın:
+1. Clone the repo:
    ```
    git clone <repo-url>
    ```
-2. `DbManager.sln` dosyasını Visual Studio 2019/2022 ile açın.
-3. DevExpress 21.2 bileşenlerinin yüklü olduğundan emin olun.
-4. `App.config` içindeki bağlantı dizesini kendi SQL Server örneğinize göre ayarlayın.
-5. Derleme ve çalıştırma: `F5` veya `Ctrl+F5`.
+2. Open `DbManager.sln` with Visual Studio 2019/2022.
+3. Make sure DevExpress 21.2 is installed.
+4. Set the connection string in `App.config` for your SQL Server.
+5. Build and run: `F5` or `Ctrl+F5`.
 
-## Kullanım
+## How to Use
 
-Uygulama açıldığında bağlantı bilgilerini girerek sunucuya bağlanın. Sol panelden işlem kategorisini seçin; ilgili veriler DevExpress grid üzerinde listelenir. Toolbar üzerindeki butonlarla backup, shrink, index rebuild gibi işlemleri başlatabilirsiniz.
+Open the app. Enter your connection info. Connect to the server. Pick a category from the left panel. Data shows in the DevExpress grid. Use the toolbar buttons to start backup, shrink, or index rebuild.
 
-## Proje Yapısı
+## Project Structure
 
 ```
 DbManager/
-├── Form1.cs               # Ana form ve UI mantığı
-├── Form1.Designer.cs      # Tasarımcı tarafından üretilen kod
-├── DatabaseHelper.cs      # SQL Server sorgular ve veritabanı işlemleri
-├── GridHelper.cs          # DevExpress grid yardımcı metotları ve Excel export
-├── Program.cs             # Giriş noktası
-├── App.config             # Uygulama yapılandırması
+├── Form1.cs               # Main form and UI logic
+├── Form1.Designer.cs      # Designer generated code
+├── DatabaseHelper.cs      # SQL Server queries and database operations
+├── GridHelper.cs          # DevExpress grid helpers and Excel export
+├── Program.cs             # Entry point
+├── App.config             # App configuration
 └── Properties/            # AssemblyInfo, Resources, Settings
 ```
